@@ -1,12 +1,15 @@
 {
   "name": "reto-practico-ai-support-engine",
   "version": "1.0.0",
-  "description": "AI Support Engine: clasificación de solicitudes de soporte (motor tradicional y generativo)",
+  "description": "AI Support Engine: clasificación de solicitudes de soporte (motor tradicional, generativo y ML)",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
-    "benchmark": "node tests/benchmark.js"
+    "benchmark": "node tests/benchmark.js",
+    "train:ml": "python3 ml/train.py",
+    "test:ml": "node tests/ml-parity.js",
+    "benchmark:ml": "node tests/ml-benchmark.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
