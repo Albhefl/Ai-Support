@@ -82,6 +82,8 @@ export = {
         "intercept": [float(v) for v in classifier.intercept_],
     },
     "report": {
+        "datasetSize": int(len(data)),
+        "classCounts": {str(k): int(v) for k, v in data["category"].value_counts().sort_index().items()},
         "trainSize": int(len(X_train)),
         "testSize": int(len(X_test)),
         "accuracy": float(accuracy_score(y_test, predictions)),

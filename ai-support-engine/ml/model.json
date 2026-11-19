@@ -6164,6 +6164,13 @@
   ]
  },
  "report": {
+  "datasetSize": 100,
+  "classCounts": {
+   "ACCESS": 25,
+   "BUG": 25,
+   "FEATURE": 25,
+   "SECURITY": 25
+  },
   "trainSize": 80,
   "testSize": 20,
   "accuracy": 0.85,

@@ -123,13 +123,21 @@ function analyzeML(message) {
 
 function getMLModelReport() {
   const model = loadModel();
+  const { report } = model;
   return {
     model: 'TfidfVectorizer(ngram_range=(1, 2)) + LogisticRegression(max_iter=1000)',
-    dataset: 'ml/tickets.csv',
     sklearnVersion: model.sklearnVersion,
+    datasetFile: 'ml/tickets.csv',
+    datasetSize: report.datasetSize,
+    classCounts: report.classCounts,
+    trainSize: report.trainSize,
+    testSize: report.testSize,
+    vocabSize: Object.keys(model.vectorizer.vocabulary).length,
     classes: model.classifier.classes,
-    vocabularySize: Object.keys(model.vectorizer.vocabulary).length,
-    ...model.report,
+    accuracy: report.accuracy,
+    classificationReport: report.classificationReportText,
+    metrics: report.classificationReport,
+    examplePrediction: report.examplePrediction,
   };
 }
 
