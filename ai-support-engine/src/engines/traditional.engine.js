@@ -183,4 +183,9 @@ function analyzeTraditional(message) {
   return buildResult(category, selectPriority(category, text));
 }
 
-module.exports = { analyzeTraditional };
+function isInjectionAttempt(text) {
+  return matchesAny(text, INJECTION_PATTERNS);
+}
+
+// Las utilidades de prioridad, detección de manipulación y respuestas se reutilizan en el motor ML.
+module.exports = { analyzeTraditional, normalizeText, selectPriority, isInjectionAttempt, RESPONSES };
