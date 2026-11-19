@@ -5,7 +5,7 @@ Repositorio de entregables. Cada tarea se integra a `main` únicamente mediante 
 | Tarea | Carpeta | Rama |
 |---|---|---|
 | 1 · Laboratorio PWA semana 10 (fallos, contratos y recuperación) | [`tarea-1-laboratorio-pwa/`](tarea-1-laboratorio-pwa/) | `tarea-1/laboratorio-pwa` |
-| 2 · Reto práctico AI Support Engine (motor tradicional + generativo + API) | `ai-support-engine/` | `tarea-2/ai-support-engine` |
+| 2 · Reto práctico AI Support Engine (motor tradicional + generativo + API) | [`ai-support-engine/`](ai-support-engine/) | `tarea-2/ai-support-engine` |
 | 3 · Clasificador ML (tickets.csv + TF-IDF + LogisticRegression) | `ai-support-engine/ml/` | `tarea-3/clasificador-ml` |
 
 ## Reglas del repositorio
